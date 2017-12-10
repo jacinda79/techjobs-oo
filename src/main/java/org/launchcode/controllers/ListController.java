@@ -61,8 +61,7 @@ public class ListController {
     }
 
     @RequestMapping(value = "jobs")
-    public String listJobsByColumnAndValue(Model model,
-            @RequestParam JobFieldType column, @RequestParam String name) {
+    public String listJobsByColumnAndValue(Model model, @RequestParam JobFieldType column, @RequestParam String name) {
 
         ArrayList<Job> jobs = jobData.findByColumnAndValue(column, name);
 
